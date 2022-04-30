@@ -2,6 +2,7 @@ from os import path
 import csv
 
 import helpDetails
+import execution
 
 userInput = input("Do you wish to continue [y/n]")
 
@@ -26,6 +27,14 @@ if userInput == "y":
         elif str.lower(userInput) == "removepath":
             pass
 
+        elif str.lower(userInput) == "notes":
+            pass
+
+        elif str.lower(userInput) == "gettime":
+            pass
+
+        else:
+            print("Command not recognized...")
+
 elif userInput == "n":
     pass
-
