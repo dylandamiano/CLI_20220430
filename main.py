@@ -1,8 +1,8 @@
 from os import path
-import csv
 
 import helpDetails
-import execution
+import csvHandling
+import auxillary
 
 userInput = input("Do you wish to continue [y/n]")
 
@@ -19,19 +19,33 @@ if userInput == "y":
 
         elif str.lower(userInput) == "start":
             userInput = input("What do you wish to start? \n")
-            # output the list of possibilities here
+            csvHandling.startFile()
 
         elif str.lower(userInput) == "addpath":
-            pass
+            csvHandling.addFile()
 
         elif str.lower(userInput) == "removepath":
-            pass
+            csvHandling.removeFile()
 
         elif str.lower(userInput) == "notes":
-            pass
+            content = []
+            print("When done writing to the note, type \"DONE\"")
+
+            while True:
+                text = input("NOTEPAD >> ")
+                
+                if str.lower(text) == "done":
+                    break
+                elif str.lower(text) != "done":
+                    content.append(text)
+                
+            #auxillary.createNote(content)
 
         elif str.lower(userInput) == "gettime":
-            pass
+            print(auxillary.outputTime())
+
+        elif str.lower(userInput) == "showfiles":
+            csvHandling.showCSVContents()
 
         else:
             print("Command not recognized...")

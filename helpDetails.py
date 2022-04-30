@@ -5,6 +5,7 @@ commands = {
     "removepath": "Removes an executable from the CSV log file",
     "notes": "Create a note file spanning one or multiple lines",
     "gettime": "Gets the system time",
+    "showfiles": "Displays file links from CSV log"
 }
 
 def showCommands():
