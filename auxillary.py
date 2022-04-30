@@ -5,5 +5,6 @@ def outputTime():
     return time.ctime(time.time())
 
 def createNote(name: str, content: list):
-    with open(".\\notes\\name.txt", "x", encoding="UTF-8") as note:
-        print("WRITING...")
+    with open(".\\notes\\" + str(name), "x") as note:
+        for i in content:
+            note.write(i)

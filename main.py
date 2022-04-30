@@ -30,6 +30,7 @@ if userInput == "y":
         elif str.lower(userInput) == "notes":
             content = []
             print("When done writing to the note, type \"DONE\"")
+            filename = input("Name your file: ")
 
             while True:
                 text = input("NOTEPAD >> ")
@@ -37,9 +38,9 @@ if userInput == "y":
                 if str.lower(text) == "done":
                     break
                 elif str.lower(text) != "done":
-                    content.append(text)
+                    content.append(text + "\n")
                 
-            #auxillary.createNote(content)
+            auxillary.createNote(filename, content)
 
         elif str.lower(userInput) == "gettime":
             print(auxillary.outputTime())
