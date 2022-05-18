@@ -4,6 +4,13 @@ import helpDetails
 import csvHandling
 import auxillary
 
+'''
+    There is nothing fancy going on here.
+    
+    I am going to revisit this in the future to add
+    more tasks to perform.
+'''
+
 userInput = input("Do you wish to continue [y/n]")
 
 if userInput == "y":
