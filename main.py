@@ -4,7 +4,7 @@ import helpDetails
 import csvHandling
 import auxillary
 
-userInput = input("Do you wish to continue [y/n]")
+userInput:str = input("Do you wish to continue [y/n]")
 
 if userInput == "y":
     while True:
